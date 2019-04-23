@@ -13,6 +13,14 @@
 */
 
 window.addEventListener("load", function () {
-            var allSelect = document.querySelectorAll('input[name="select"');
+    var allSelect = document.getElementsByTagName("select");
 
-        }
+    for (var i = 0; i < allSelect.length; i++) {
+        allSelect[i].addEventListener("change", function (e) {
+
+            window.location.href = e.target.value;
+        });
+
+    }
+
+})
